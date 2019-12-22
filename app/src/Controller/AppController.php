@@ -40,7 +40,8 @@ class AppController extends Controller
     public function initialize()
     {
         parent::initialize();
-
+        
+        $this->viewBuilder()->layout('my_layout');
         $this->loadComponent('RequestHandler', [
             'enableBeforeRedirect' => false,
         ]);
