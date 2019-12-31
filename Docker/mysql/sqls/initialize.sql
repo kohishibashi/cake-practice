@@ -32,7 +32,7 @@ CREATE TABLE `users` (
 
 CREATE TABLE `patients` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `carrer_id` int(10) unsigned NOT NULL,
+  `carrier_id` int(10) unsigned NOT NULL,
   `name` varchar(255),
   `phone` varchar(255),
   `address` varchar(255),
@@ -45,7 +45,7 @@ CREATE TABLE `patients` (
 CREATE TABLE `carriers` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255),
-  `carrer_code` varchar(255),
+  `carrier_code` varchar(255),
   `created` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -76,7 +76,7 @@ CREATE TABLE `appointments` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255),
   `patient_id` int(10) unsigned NOT NULL,
-  `docter_id` int(10) unsigned NOT NULL,
+  `doctor_id` int(10) unsigned NOT NULL,
   `appointment_date` date,
   `created` datetime NOT NULL,
   PRIMARY KEY (`id`)
